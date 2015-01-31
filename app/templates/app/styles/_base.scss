@@ -1,0 +1,34 @@
+body, html {
+  @extend .font-body;
+  background-color: $colour-site-background;
+  color: $colour-font;
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: $colour-font-highlight;
+
+  @include transition-property(color);
+  @include transition-duration(0.2s);
+  @include animation-timing-function($ease-out-expo);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"],
+input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+  box-sizing: border-box;
+}

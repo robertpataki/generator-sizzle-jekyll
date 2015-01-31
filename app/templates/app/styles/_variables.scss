@@ -1,0 +1,22 @@
+// Colours
+$colour-site-background: #E1E3E4;
+$colour-content-background: #FFFFFF;
+$colour-header-background: #000000;
+$colour-footer-background: #000000;
+
+$colour-font: #000000;
+$colour-font-invert: #FFFFFF;
+$colour-font-highlight: #DD002A;
+
+$colour-heading: $colour-font;
+$colour-horizontal-rule: $colour-font-highlight;
+
+// Metrics
+$metrics-mobile-maxwidth: 480px;
+$metrics-tablet-maxwidth: 720px;
+$metrics-desktop-maxwidth: 960px;
+
+$metrics-site-margin: 24px;
+$metrics-site-maxwidth: 1088; //in px
+$metrics-header-height: 81px;
+$metrics-footer-height: 120px;

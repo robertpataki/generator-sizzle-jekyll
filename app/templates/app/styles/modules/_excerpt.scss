@@ -1,0 +1,12 @@
+.excerpt {
+  border-bottom: 1px solid tint($colour-font, 80%);
+  padding-bottom: em(15);
+}
+
+.excerpt_title {
+  @extend .subheading;
+}
+
+.excerpt_contents {
+  
+}

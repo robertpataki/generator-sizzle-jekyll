@@ -1,0 +1,8 @@
+{
+	"name": "<%= appName %>",
+	"directories": {
+		"app": "app",
+		"dist": "dist",
+    "baseurl": "/generator-sizzle-jekyll"
+	}
+}

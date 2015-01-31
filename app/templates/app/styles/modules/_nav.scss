@@ -1,0 +1,176 @@
+.menu_overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  display: none;
+  z-index: 500;
+  opacity: 0;
+}
+
+.burger_button {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+  float: right;
+  right: 20px;
+  top: 10px;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+.nav-main {
+  float: right;
+
+  .navbutton {
+    padding: 30px 20px;
+    overflow: hidden;
+    z-index: 1;
+    margin-right: 1px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 6px;
+      background: $colour-font-highlight;
+
+      @include transition-property(bottom);
+      @include transition-duration(0.3s);
+      @include animation-timing-function($ease-out-expo);
+    }
+
+    &:after {
+      content: "";
+      z-index: -1;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 100%;
+      width: 100%;
+      height: 100%;
+      background: lighten($colour-font-highlight, 10%);
+
+      @include transition-property(bottom);
+      @include transition-duration(0.2s);
+      @include animation-timing-function($ease-out-expo);
+    }
+
+    a {
+      display: block;
+
+      &:before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: -30px;
+        left: -12px;
+        right: -12px;
+        bottom: -30px;
+      }
+    }
+
+    &.is-active {
+      &:before {
+        bottom: 0;
+      }
+
+      &:after {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.navbuttons {
+  display: block;
+  list-style: none;
+  color: $colour-font-invert;
+  margin: 0;
+  padding: 0;
+}
+
+.navbutton {
+  float: left;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: $colour-font-invert;
+    text-decoration: none;
+  }
+}
+
+
+// States
+@include media($tablet-breakpoint) {
+  .burger_button {
+    display: block;
+    visibility: visible;
+  }
+
+  .header {
+    height: 324px;
+  }
+
+  .container-header {
+    position: absolute;
+    @include transform(translateY(-324px));
+  }
+
+  .post {
+    padding-top: 64px;
+  }
+
+  .nav-main {
+    float: none;
+    display: block;
+
+    .navbutton {
+      width: 100%;
+      display: block;
+      float: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+  }
+
+  .branding {
+    width: 100%;
+    height: 64px;
+    padding-left: 12px;
+    top: 0;
+    position: relative;
+  }
+
+  .branding_logo {
+    top: 6px;
+    width: 191px;
+    height: 51px;
+  }
+}
+
+html:not(.is-touch) {
+  .nav-main {
+    .navbutton {
+      &:hover {
+        &:before {
+          bottom: 0;
+        }
+
+        &:after {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

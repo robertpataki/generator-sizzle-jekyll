@@ -1,0 +1,17 @@
+// Grid columns
+$grid-columns-mobile: 4;
+$grid-columns-tablet: 8;
+$grid-columns-desktop: 12;
+
+// Visual grid
+$visual-grid: false;
+$visual-grid-color: #0099FF;
+$visual-grid-index: 0;
+$visual-grid-opacity: 0.12;
+
+$max-width: em($metrics-site-maxwidth);
+$grid-columns: $grid-columns-desktop;
+
+$desktop-breakpoint: new-breakpoint(max-width $metrics-desktop-maxwidth $grid-columns-desktop);
+$tablet-breakpoint: new-breakpoint(max-width $metrics-tablet-maxwidth $grid-columns-tablet);
+$mobile-breakpoint: new-breakpoint(max-width $metrics-mobile-maxwidth $grid-columns-mobile);

@@ -1,0 +1,25 @@
+---
+layout: default
+title: Sizzle Jekyll Demo
+---
+
+<div id="home" class="l-content">
+  <div class="l-content_block">
+    <h2 class="heading">Home</h2>
+  </div>
+
+  <div class="l-content_block">
+    <div class="content">
+      {% for post in site.posts %}
+        <article class="excerpt">
+          <h1 class="excerpt_title">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h1>
+          <div class="excerpt_entry">
+            {{ post.excerpt }}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>

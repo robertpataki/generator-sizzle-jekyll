@@ -1,0 +1,23 @@
+.contents_half {
+  @include span-columns(5 of 10);
+}
+.contents_half-center {
+  @extend .contents_half;
+  @include shift(2.5);
+}
+
+.contents_third {
+  @include span-columns(3.333 of 10);
+}
+.contents_third-center {
+  @extend .contents_third;
+  @include shift(5);
+}
+
+.contents_twothird {
+  @include span-columns(6.666 of 10);
+}
+.contents_twothird-center {
+  @extend .contents_twothird;
+  @include shift(1.667);
+}

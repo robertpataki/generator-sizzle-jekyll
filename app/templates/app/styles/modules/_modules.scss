@@ -1,0 +1,59 @@
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.heading {
+  color: $colour-heading;
+  font-size: em(24);
+}
+.subheading {
+  font-size: em(18); 
+}
+
+
+
+.container-header {
+  background-color: $colour-header-background;
+  z-index: 1000;
+}
+.container-footer {
+  background-color: $colour-footer-background;
+} 
+
+.header {
+  height: $metrics-header-height;
+}
+.footer {
+  height: $metrics-footer-height;
+}
+
+.branding {
+  position: absolute;
+  display: inline-block;
+  z-index: 1000;
+  top: 10px;
+  // padding-left: $metrics-site-margin;
+}
+.branding_logo {
+  width: 219px;
+  height: 173px;
+  display: inline-block;
+  background: url('../images/yeoman-sizzle-jekyll-hand.png'); 
+  overflow: hidden;
+  text-indent: -999999px;
+  margin: 0;
+}
+
+.footer_content {
+  text-align: center;
+  color: $colour-font-invert;
+  a {
+    color: $colour-font-invert;
+  }
+  top: 32px;
+}
+
+.post {
+  background: $colour-content-background;
+}

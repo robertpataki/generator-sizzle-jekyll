@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include site-head.html %}
+    </head>
+    <body>
+        <div class="site">
+          <div class="container-header">
+            <div class="l-wrapper">
+              {% include menu.html %}
+              <div class="branding">
+                <a href="{{ site.baseurl }}/">
+                  <h1 class="branding_logo">OS Bass Tabs</h1>
+                </a>
+                <button class="burger_button" type="button" role="button" aria-label="Toggle Navigation">
+                  <span class="burger_lines"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu_overlay"></div>
+
+          <div class="l-wrapper">
+            <section class="post">
+              {{ content }}
+            </section>
+          </div>
+
+          <div class="container-footer">
+            <div class="l-wrapper">
+              <footer class="footer">
+                <div class="footer_content">Copyright &copy; 2015 - This project is created <br/> and maintained by <a href="//robertpataki.com" target="_blank">Rob Pataki</a></div>
+              </footer>
+            </div>
+          </div>
+
+        {% include site-foot.html %}
+    </body>
+</html>
